@@ -1,0 +1,50 @@
+.hero {
+    height: 100vh;
+    background-image: url(../images/img_logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 0 55%;
+
+    @media (max-width: 768px) {
+        background-image: url(../images/banner.png);
+        background-position: 50% 0;
+
+        .hero__text {
+            max-width: 90%;
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .hero__text {
+            font-size: 15px;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: '';
+        opacity: .7;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 50px;
+        position: relative;
+        top: 45%;
+        background-color: #000;
+        opacity: 75%;
+        padding: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+        border-radius: 71px;
+    }
+
+
+}
